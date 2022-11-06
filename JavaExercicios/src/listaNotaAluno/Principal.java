@@ -42,7 +42,32 @@ public class Principal {
 			qtdeAlunos--;
 		}
 		
+		int x = 0;
+		String descAlunos = "";
 		
-	}
+		while (alunos.size() > x) {
+			descAlunos = descAlunos + (x + 1)  + " - " + alunos.get(x).getNome() + ' ' + 
+					alunos.get(x).getIdade() + " ";
+			x++;
+		}
+		
+		JOptionPane.showMessageDialog(null, "os alunos são: " + descAlunos + ' ');
+		
+		x = Integer.parseInt(JOptionPane.showInputDialog(null, "Qual deseja excluir?"));
+		
+		alunos.remove(x-1);
+		
+		x = 0;
+		descAlunos = "";
+		
+		while (alunos.size() > x) {
+			descAlunos = descAlunos + (x + 1)  + " - " + alunos.get(x).getNome() + ' ' + 
+					alunos.get(x).getIdade() + " ";
+			x++;
+		}
+		
+		JOptionPane.showMessageDialog(null, "os alunos são: " + descAlunos + ' ');
+		
+	}	
 
 }
